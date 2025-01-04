@@ -42,7 +42,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
       storage.add(new RestaurantRecord(restaurant));
     });
 
-    app.listen(PORT, '0.0.0.0', function() {
+    app.listen(PORT, function() {
       console.log('Go to http://localhost:' + PORT + '/');
     });
   });

@@ -10,11 +10,8 @@ menu:
 restaurant:
 	cd restaurantService && npm install
 
-build:
-	npm run build
-
 install:
-	npm install && make checkout menu restaurant && npm run build
+	npm install && make checkout menu restaurant
 
 run:
 	npx concurrently "npm:checkoutService" "npm:menuService" "npm:restaurantService" "npm:start" --kill-others
